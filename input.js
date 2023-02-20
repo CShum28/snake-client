@@ -9,6 +9,8 @@ const handleUserInput = (key) => {
   if (key === "a") connection.write("Move: left");
   if (key === "s") connection.write("Move: down");
   if (key === "d") connection.write("Move: right");
+  if (key === "b") connection.write("Say: I'm going to win!");
+  if (key === "n") connection.write("Say: You can't beat me!");
 };
 
 const setupInput = (conn) => {
