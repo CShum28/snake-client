@@ -5,6 +5,8 @@ const moveDown = "s";
 const moveLeft = "a";
 const moveRight = "d";
 const exitGame = "\u0003";
+const messageOne = "b";
+const messageTwo = "n";
 
 module.exports = {
   IP,
@@ -14,4 +16,6 @@ module.exports = {
   moveLeft,
   moveRight,
   exitGame,
+  messageOne,
+  messageTwo,
 };

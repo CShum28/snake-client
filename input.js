@@ -1,24 +1,18 @@
-const {
-  moveUp,
-  moveDown,
-  moveLeft,
-  moveRight,
-  exitGame,
-} = require("./constants");
+const constant = require("./constants");
 
 let connection;
 
 const handleUserInput = (key) => {
-  if (key === exitGame) {
+  if (key === constant.exitGame) {
     console.log("Good bye!");
     process.exit();
   }
-  if (key === moveUp) connection.write("Move: up");
-  if (key === moveLeft) connection.write("Move: left");
-  if (key === moveDown) connection.write("Move: down");
-  if (key === moveRight) connection.write("Move: right");
-  if (key === "b") connection.write("Say: I'm going to win!");
-  if (key === "n") connection.write("Say: You can't beat me!");
+  if (key === constant.moveUp) connection.write("Move: up");
+  if (key === constant.moveLeft) connection.write("Move: left");
+  if (key === constant.moveDown) connection.write("Move: down");
+  if (key === constant.moveRight) connection.write("Move: right");
+  if (key === constant.messageOne) connection.write("Say: I'm going to win!");
+  if (key === constant.messageTwo) connection.write("Say: You can't beat me!");
 };
 
 const setupInput = (conn) => {
